@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px; /* Increased max-width to accommodate wider charts */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px; /* Increased max-width to match container */
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -194,8 +194,10 @@ body {
 .viz-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 3rem; /* Increased gap for better spacing */
     align-items: stretch;
+    max-width: 1400px; /* Increased max-width to allow for wider cards */
+    margin: 0 auto; /* Center the grid */
 }
 
 .viz-card {
@@ -207,6 +209,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 600px; /* Restored original height for better chart visibility */
+    min-width: 500px; /* Added minimum width to ensure adequate space for charts */
 }
 
 .viz-card:hover {
@@ -301,14 +304,16 @@ body {
     box-shadow: 0 4px 20px rgba(47, 37, 38, 0.1);
     height: 200px !important; /* Smaller height for Tableau preview */
     width: 100% !important; /* Ensure full width */
-    min-width: 300px !important; /* Reduced minimum width to prevent overflow */
+    min-width: 500px !important; /* Increased minimum width for better chart visibility */
+    max-width: 800px !important; /* Added maximum width to prevent excessive stretching */
     position: relative;
 }
 
 .preview-image .tableauViz {
     width: 100% !important;
     height: 200px !important; /* Smaller height for Tableau preview */
-    min-width: 300px !important; /* Reduced minimum width to prevent overflow */
+    min-width: 500px !important; /* Increased minimum width for better chart visibility */
+    max-width: 800px !important; /* Added maximum width to prevent excessive stretching */
     border-radius: 8px;
     overflow: hidden;
     object-fit: cover;
