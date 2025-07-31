@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Capstone Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Data Science Capstone</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#visualizations">Visualizations</a></li>
+                <li><a href="#findings">Findings</a></li>
+                <li><a href="#contact">Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Viral Toy Trends & Digital Consumer Behavior</h1>
+            <p>Analyzing Social Media's Impact on Collectible Culture and Shopping Psychology</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>4</h3>
+                    <p>Interactive Dashboards</p>
+                </div>
+                <div class="stat">
+                    <h3>100%</h3>
+                    <p>Data Driven Insights</p>
+                </div>
+                <div class="stat">
+                    <h3>Multi-Regional</h3>
+                    <p>Focused Research</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Our Project</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Our capstone project explores the fascinating intersection of viral toy trends and digital consumer psychology, analyzing how social media platforms accelerate the lifecycle of collectible culture from niche hobbies to global sensations. We investigate how microtrends like Mini Brands (2020), Pop Its (2021), Squishmallows (2022), Sonny Angel (2024), and Labubu (2025) rise and fall through TikTok virality and emotional engagement.</p>
+                    <p>Using data from Google Trends, TikTok hashtag analytics, Instagram post counts, Kaggle datasets on TikTok Shop scarcity perceptions, and consumer shopping behavior reports, we've created interactive visualizations that reveal how digital engagement, regional factors, and social media influence shape both collectible culture and modern shopping psychology across different demographics and geographic locations.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Target Audience</h3>
+                        <p>Students, educators, and researchers interested in digital consumer behavior and social media influence.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Data Pipeline</h3>
+                        <p>Data online → Sheets → SQL → Tableau for comprehensive analysis</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📊</div>
+                        <h3>Interactive Dashboards</h3>
+                        <p>Dynamic visualizations with filters, tooltips, and cross-chart highlighting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="visualizations" class="visualizations">
+        <div class="container">
+            <h2>Interactive Dashboards</h2>
+            <p class="section-description">Explore our comprehensive analysis through four detailed visualizations. Each dashboard provides unique insights into viral toy trends, digital consumer psychology, and social media's impact on shopping behavior.</p>
+            
+            <!-- Our Main Purpose Section -->
+            <div class="viz-section">
+                <h3 class="section-header">Our Main Purpose</h3>
+                <div class="viz-grid">
+                                                             <div class="viz-card">
+                        <h3>Viral Toy Trends Analysis</h3>
+                        <p class="viz-description">Analysis of viral toy microtrends from 2020-2025 and their social media lifecycle</p>
+                        <div class="viz-preview">
+                            <div class="preview-image">
+                                <div class='tableauPlaceholder' id='viz1753975741699-preview' style='position: relative; height: 200px; width: 100%; overflow: hidden;'>
+                                    <noscript>
+                                        <a href='#'>
+                                            <img alt='Sheet 1 ' src='https://public.tableau.com/static/images/Go/GoogleTrendsViz/Sheet1/1_rss.png' style='border: none; width: 100%; height: 100%; object-fit: cover;' />
+                                        </a>
+                                    </noscript>
+                                    <object class='tableauViz' style='display:none;'>
+                                        <param name='host_url' value='https://public.tableau.com/' />
+                                        <param name='embed_code_version' value='3' />
+                                        <param name='site_root' value='' />
+                                        <param name='name' value='GoogleTrendsViz/Sheet1' />
+                                        <param name='tabs' value='no' />
+                                        <param name='toolbar' value='yes' />
+                                        <param name='static_image' value='https://public.tableau.com/static/images/Go/GoogleTrendsViz/Sheet1/1.png' />
+                                        <param name='animate_transition' value='yes' />
+                                        <param name='display_static_image' value='yes' />
+                                        <param name='display_spinner' value='yes' />
+                                        <param name='display_overlay' value='yes' />
+                                        <param name='display_count' value='yes' />
+                                        <param name='language' value='en-US' />
+                                    </object>
+                                </div>
+                                <script type='text/javascript'>
+                                    var divElement = document.getElementById('viz1753975741699-preview');
+                                    var vizElement = divElement.getElementsByTagName('object')[0];
+                                    
+                                    // Set responsive sizing for preview
+                                    function resizeVizPreview() {
+                                        var containerWidth = divElement.offsetWidth;
+                                        vizElement.style.width = '100%';
+                                        vizElement.style.height = '200px';
+                                        vizElement.style.maxWidth = '100%';
+                                        vizElement.style.minWidth = '400px';
+                                    }
+                                    
+                                    // Initial resize
+                                    resizeVizPreview();
+                                    
+                                    // Resize on window resize
+                                    window.addEventListener('resize', resizeVizPreview);
+                                    
+                                    // Load Tableau script
+                                    var scriptElement = document.createElement('script');
+                                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                    scriptElement.onload = function() {
+                                        setTimeout(function() {
+                                            vizElement.classList.add('loaded');
+                                        }, 1000);
+                                    };
+                                    scriptElement.onerror = function() {
+                                        console.error('Failed to load Tableau script');
+                                        vizElement.style.display = 'none';
+                                        divElement.querySelector('noscript').style.display = 'block';
+                                    };
+                                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                                </script>
+                            </div>
+                            <a href="viz3-correlation.html" class="viz-button">Explore Correlations</a>
+                        </div>
+                    </div>
+                    
+                    <div class="viz-card">
+                        <h3>TikTok Shop Scarcity Analysis</h3>
+                        <p class="viz-description">Regional analysis of consumer scarcity perceptions on TikTok Shop in Vietnam</p>
+                        <div class="viz-preview">
+                            <div class="preview-image">
+                                <div class='tableauPlaceholder' id='viz1753974593438-preview' style='position: relative; height: 200px; width: 100%; overflow: hidden;'>
+                                    <noscript>
+                                        <a href='#'>
+                                            <img alt='Sheet 1 ' src='https://public.tableau.com/static/images/Is/Ishana-Viz/Sheet1/1_rss.png' style='border: none; width: 100%; height: 100%; object-fit: cover;' />
+                                        </a>
+                                    </noscript>
+                                    <object class='tableauViz' style='display:none;'>
+                                        <param name='host_url' value='https://public.tableau.com/' />
+                                        <param name='embed_code_version' value='3' />
+                                        <param name='site_root' value='' />
+                                        <param name='name' value='Ishana-Viz/Sheet1' />
+                                        <param name='tabs' value='no' />
+                                        <param name='toolbar' value='yes' />
+                                        <param name='static_image' value='https://public.tableau.com/static/images/Is/Ishana-Viz/Sheet1/1.png' />
+                                        <param name='animate_transition' value='yes' />
+                                        <param name='display_static_image' value='yes' />
+                                        <param name='display_spinner' value='yes' />
+                                        <param name='display_overlay' value='yes' />
+                                        <param name='display_count' value='yes' />
+                                        <param name='language' value='en-US' />
+                                    </object>
+                                </div>
+                                <script type='text/javascript'>
+                                    var divElement = document.getElementById('viz1753974593438-preview');
+                                    var vizElement = divElement.getElementsByTagName('object')[0];
+                                    
+                                    // Set responsive sizing for preview
+                                    function resizeVizPreview() {
+                                        var containerWidth = divElement.offsetWidth;
+                                        vizElement.style.width = '100%';
+                                        vizElement.style.height = '200px';
+                                        vizElement.style.maxWidth = '100%';
+                                        vizElement.style.minWidth = '400px';
+                                    }
+                                    
+                                    // Initial resize
+                                    resizeVizPreview();
+                                    
+                                    // Resize on window resize
+                                    window.addEventListener('resize', resizeVizPreview);
+                                    
+                                    // Load Tableau script
+                                    var scriptElement = document.createElement('script');
+                                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                    scriptElement.onload = function() {
+                                        setTimeout(function() {
+                                            vizElement.classList.add('loaded');
+                                        }, 1000);
+                                    };
+                                    scriptElement.onerror = function() {
+                                        console.error('Failed to load Tableau script');
+                                        vizElement.style.display = 'none';
+                                        divElement.querySelector('noscript').style.display = 'block';
+                                    };
+                                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                                </script>
+                            </div>
+                            <a href="viz4-demographics.html" class="viz-button">Explore Demographics</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action Section -->
+            <div class="viz-section">
+                <h3 class="section-header">Call to Action</h3>
+                <div class="viz-grid">
+                    <div class="viz-card">
+                        <h3>Google Trends Analysis</h3>
+                        <p class="viz-description">Analysis of viral toy search trends and social media hashtag metrics</p>
+                        <div class="viz-preview">
+                            <div class="preview-image">
+                                                                 <div class='tableauPlaceholder' id='viz1753900366942' style='position: relative; height: 200px; width: 100%; overflow: hidden;'>
+                                    <noscript>
+                                        <a href='#'>
+                                            <img alt='Scarcity ' src='https://public.tableau.com/static/images/Fi/FinalProject_17538907018640/Sheet1/1_rss.png' style='border: none; width: 100%; height: 100%; object-fit: cover;' />
+                                        </a>
+                                    </noscript>
+                                    <object class='tableauViz' style='display:none;'>
+                                        <param name='host_url' value='https://public.tableau.com/' />
+                                        <param name='embed_code_version' value='3' />
+                                        <param name='site_root' value='' />
+                                        <param name='name' value='FinalProject_17538907018640/Sheet1' />
+                                        <param name='tabs' value='no' />
+                                        <param name='toolbar' value='yes' />
+                                        <param name='static_image' value='https://public.tableau.com/static/images/Fi/FinalProject_17538907018640/Sheet1/1.png' />
+                                        <param name='animate_transition' value='yes' />
+                                        <param name='display_static_image' value='yes' />
+                                        <param name='display_spinner' value='yes' />
+                                        <param name='display_overlay' value='yes' />
+                                        <param name='display_count' value='yes' />
+                                        <param name='language' value='en-US' />
+                                    </object>
+                                </div>
+                                <script type='text/javascript'>
+                                    var divElement = document.getElementById('viz1753900366942');
+                                    var vizElement = divElement.getElementsByTagName('object')[0];
+                                    
+                                     // Set responsive sizing for preview
+                                     function resizeVizPreview() {
+                                         var containerWidth = divElement.offsetWidth;
+                                         vizElement.style.width = '100%';
+                                         vizElement.style.height = '200px';
+                                         vizElement.style.maxWidth = '100%';
+                                         vizElement.style.minWidth = '400px';
+                                     }
+                                    
+                                     // Initial resize
+                                     resizeVizPreview();
+                                    
+                                     // Resize on window resize
+                                     window.addEventListener('resize', resizeVizPreview);
+                                    
+                                     // Load Tableau script
+                                     var scriptElement = document.createElement('script');
+                                     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                     scriptElement.onload = function() {
+                                         setTimeout(function() {
+                                             vizElement.classList.add('loaded');
+                                         }, 1000);
+                                     };
+                                     scriptElement.onerror = function() {
+                                         console.error('Failed to load Tableau script');
+                                         vizElement.style.display = 'none';
+                                         divElement.querySelector('noscript').style.display = 'block';
+                                     };
+                                     vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                                 </script>
+                            </div>
+                            <a href="viz1-trends.html" class="viz-button">Explore Trends</a>
+                        </div>
+                    </div>
+                    
+                    <div class="viz-card">
+                        <h3>U.S. Shopping Behavior Analysis</h3>
+                        <p class="viz-description">Analysis of American shopping patterns: new vs. thrift vs. resale consumption</p>
+                        <div class="viz-preview">
+                            <div class="preview-image">
+                                <div class='tableauPlaceholder' id='viz1753886530259-preview' style='position: relative; height: 200px; overflow: hidden;'>
+                                    <noscript>
+                                        <a href='https://public.tableau.com/views/HowAmericansShopThriftResaleandNew/Dashboard1'>
+                                            <img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/Ho/HowAmericansShopThriftResaleandNew/Dashboard1/1_rss.png' style='border: none; width: 100%; height: 100%; object-fit: cover;' />
+                                        </a>
+                                    </noscript>
+                                    <object class='tableauViz' style='display:none;'>
+                                        <param name='host_url' value='https://public.tableau.com/' />
+                                        <param name='embed_code_version' value='3' />
+                                        <param name='site_root' value='' />
+                                        <param name='name' value='HowAmericansShopThriftResaleandNew/Dashboard1' />
+                                        <param name='tabs' value='no' />
+                                        <param name='toolbar' value='no' />
+                                        <param name='static_image' value='https://public.tableau.com/static/images/Ho/HowAmericansShopThriftResaleandNew/Dashboard1/1.png' />
+                                        <param name='animate_transition' value='yes' />
+                                        <param name='display_static_image' value='yes' />
+                                        <param name='display_spinner' value='yes' />
+                                        <param name='display_overlay' value='yes' />
+                                        <param name='display_count' value='yes' />
+                                        <param name='language' value='en-US' />
+                                    </object>
+                                </div>
+                                <script type='text/javascript'>
+                                    var divElement = document.getElementById('viz1753886530259-preview');
+                                    var vizElement = divElement.getElementsByTagName('object')[0];
+                                    
+                                     // Set responsive sizing for preview
+                                     function resizeVizPreview() {
+                                         var containerWidth = divElement.offsetWidth;
+                                         vizElement.style.width = '100%';
+                                         vizElement.style.height = '200px';
+                                         vizElement.style.maxWidth = '100%';
+                                     }
+                                    
+                                     // Initial resize
+                                     resizeVizPreview();
+                                    
+                                     // Resize on window resize
+                                     window.addEventListener('resize', resizeVizPreview);
+                                    
+                                     // Load Tableau script
+                                     var scriptElement = document.createElement('script');
+                                     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                     scriptElement.onload = function() {
+                                         setTimeout(function() {
+                                             vizElement.classList.add('loaded');
+                                         }, 1000);
+                                     };
+                                     scriptElement.onerror = function() {
+                                         console.error('Failed to load Tableau script');
+                                         vizElement.style.display = 'none';
+                                         divElement.querySelector('noscript').style.display = 'block';
+                                     };
+                                     vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                                 </script>
+                            </div>
+                            <a href="viz2-shopping.html" class="viz-button">Explore Shopping Data</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <section id="findings" class="findings">
+        <div class="container">
+            <h2>Key Findings</h2>
+                                         <div class="findings-grid">
+                    <div class="finding-card">
+                        <h3>Viral Toy Microtrends</h3>
+                        <p>Each year from 2020-2025 had one dominant viral toy: Mini Brands (2020), Pop Its (2021), Squishmallows (2022), Sonny Angel (2024), and Labubu (2025), with social media platforms dramatically accelerating trend lifecycles from years to weeks.</p>
+                    </div>
+                    <div class="finding-card">
+                        <h3>Regional Scarcity Psychology</h3>
+                        <p>Consumers in Can Tho consistently report the highest concern across all scarcity factors—promotion deadlines, time limits, quantity constraints, and fear of stockouts—while provinces like Tra Vinh and Soc Trang show lower levels of scarcity concern, revealing regional differences in digital shopping psychology.</p>
+                    </div>
+                    <div class="finding-card">
+                        <h3>Sustainable Shopping Gap</h3>
+                        <p>70% of U.S. shoppers still buy items brand new, with only 17% choosing to thrift and 13% buying from resale platforms, despite the rise of sustainable fashion and secondhand marketplaces, highlighting the gap between environmental awareness and actual shopping behavior.</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+                   <section id="contact" class="contact">
+          <div class="container">
+              <h2>Meet Our Team</h2>
+              <div class="contact-content" style="display: flex; justify-content: center; align-items: center;">
+                                    <div class="contact-info" style="text-align: center; width: 100%;">
+                       <div class="contact-details" style="text-align: center;">
+                           <p>👥 Anahita Mayekar, Samantha Wong</p>
+                           <p>👥 Atmika Balaji, Ishana Manikandan</p>
+                           <p>🎓 KWK Data Science Capstone Project</p>
+                       </div>
+                   </div>
+              </div>
+          </div>
+      </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 KWK Data Science Capstone - Team B1. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

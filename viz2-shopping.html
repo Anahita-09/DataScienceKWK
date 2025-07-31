@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Shopping Behavior Analysis - Data Science Capstone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html" style="color: var(--off-white); text-decoration: none;">Data Science Capstone</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="viz1-trends.html">Trends Analysis</a></li>
+                <li><a href="viz2-shopping.html" class="active">Shopping Behavior</a></li>
+                <li><a href="viz3-correlation.html">Behavior Correlation</a></li>
+                <li><a href="viz4-demographics.html">Youth Demographics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="viz-hero">
+        <div class="container">
+            <h1>🏷️ Title</h1>
+            <p class="viz-subtitle">"How Americans Shop: First-Hand vs Reused"</p>
+        </div>
+    </section>
+
+    <section class="viz-content">
+        <div class="container">
+            <div class="viz-explanation">
+                <h2>📄 What It's About (& Sources)</h2>
+                <p>This pie chart breaks down how people in the United States shop:</p>
+                <ul>
+                    <li>Buying first-hand (new) products</li>
+                    <li>Purchasing from thrift stores</li>
+                    <li>Shopping via resale or consignment platforms</li>
+                </ul>
+                <p>The data was compiled using public consumer trend reports from sources like ThredUp's Resale Report and Statista (2024), and was simplified to reflect general population behavior.</p>
+                
+                <h3>🔍 Key Insights</h3>
+                <ul>
+                    <li><strong>70%</strong> of U.S. shoppers still buy items brand new.</li>
+                    <li>Only <strong>17%</strong> choose to thrift, while <strong>13%</strong> buy from resale or consignment sources.</li>
+                    <li>Despite the rise of sustainable fashion and secondhand platforms, reuse is still underutilized by the majority.</li>
+                </ul>
+            </div>
+
+            <div class="viz-chart-container">
+                <h3>Interactive Dashboard</h3>
+                <div class="tableau-container-large">
+                    <div class='tableauPlaceholder' id='viz1753886530259' style='position: relative'>
+                        <noscript>
+                            <a href='https://public.tableau.com/views/HowAmericansShopThriftResaleandNew/Dashboard1'>
+                                <img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/Ho/HowAmericansShopThriftResaleandNew/Dashboard1/1_rss.png' style='border: none' />
+                            </a>
+                        </noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https://public.tableau.com/' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='HowAmericansShopThriftResaleandNew/Dashboard1' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/Ho/HowAmericansShopThriftResaleandNew/Dashboard1/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                        </object>
+                    </div>
+                    <script type='text/javascript'>
+                        var divElement = document.getElementById('viz1753886530259');
+                        var vizElement = divElement.getElementsByTagName('object')[0];
+                        
+                        // Set responsive sizing for larger display
+                        function resizeViz() {
+                            var containerWidth = divElement.offsetWidth;
+                            if (containerWidth > 1200) {
+                                vizElement.style.width = '100%';
+                                vizElement.style.height = '500px';
+                            } else if (containerWidth > 800) {
+                                vizElement.style.width = '100%';
+                                vizElement.style.height = '450px';
+                            } else {
+                                vizElement.style.width = '100%';
+                                vizElement.style.height = '400px';
+                            }
+                        }
+                        
+                        // Initial resize
+                        resizeViz();
+                        
+                        // Resize on window resize
+                        window.addEventListener('resize', resizeViz);
+                        
+                        // Load Tableau script
+                        var scriptElement = document.createElement('script');
+                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                        scriptElement.onload = function() {
+                            setTimeout(function() {
+                                vizElement.classList.add('loaded');
+                            }, 1000);
+                        };
+                        scriptElement.onerror = function() {
+                            console.error('Failed to load Tableau script');
+                            vizElement.style.display = 'none';
+                            divElement.querySelector('noscript').style.display = 'block';
+                        };
+                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                    </script>
+                </div>
+            </div>
+
+            <div class="viz-insights">
+                <h3>💡 What This Data Viz Tells Us</h3>
+                <p>This chart highlights a major opportunity:</p>
+                <p>Americans could significantly reduce waste by shifting even a portion of their shopping from new to reused options.</p>
+                <p>It suggests we need to encourage creativity, sustainability, and reusability — not just for the environment, but also to challenge consumer culture and inspire innovation.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 KWK Data Science Capstone - Team B1. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

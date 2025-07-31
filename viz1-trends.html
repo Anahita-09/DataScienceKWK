@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Shop Scarcity Analysis - Data Science Capstone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html" style="color: var(--off-white); text-decoration: none;">Data Science Capstone</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="viz1-trends.html" class="active">Trends Analysis</a></li>
+                <li><a href="viz2-shopping.html">Shopping Behavior</a></li>
+                <li><a href="viz3-correlation.html">Behavior Correlation</a></li>
+                <li><a href="viz4-demographics.html">Youth Demographics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="viz-hero">
+        <div class="container">
+            <h1>TikTok Shop Scarcity Analysis</h1>
+            <p class="viz-subtitle">Understanding Consumer Perceptions of Scarcity on TikTok Shop in Vietnam</p>
+        </div>
+    </section>
+
+    <section class="viz-content">
+        <div class="container">
+            <div class="viz-explanation">
+                <h2>📄 What It's About (& Sources)</h2>
+                <p>The data visualization illustrates the concerns of consumers on TikTok Shop in Vietnam by analyzing consumers' perceptions of scarcity on TikTok Shop — how much users feel urgency, limited quantity, or risk of missing out (FOMO) while shopping on the platform.</p>
+                
+                <h3>🔍 Sources Used</h3>
+                <p><strong>Kaggle:</strong> <a href="https://www.kaggle.com/datasets/jocelyndumlao/impulse-buying-factors-on-tiktok-shop?resource=download" target="_blank">https://www.kaggle.com/datasets/jocelyndumlao/impulse-buying-factors-on-tiktok-shop?resource=download</a></p>
+                <p><strong>Dataset:</strong> Impulse Buying Factors on TikTok Shop - Understanding What Drives Impulse Purchases Among Vietnamese Students on TikTok</p>
+                
+                <h3>💡 Key Insights</h3>
+                <ul>
+                    <li><strong>Can Tho</strong> shows the highest scarcity concern</li>
+                    <li><strong>Tra Vinh and Soc Trang</strong> show the lowest concern</li>
+                    <li><strong>Promotion-related urgency</strong> is the most triggering</li>
+                    <li><strong>Regional digital behaviors</strong> may influence perception</li>
+                    <li><strong>Limited quantity and out-of-stock worries</strong> are closely related</li>
+                </ul>
+            </div>
+
+            <div class="viz-chart-container">
+                <h3>Interactive Chart</h3>
+                <div class="chart-wrapper">
+                    <div class='tableauPlaceholder' id='viz1753900366942-full' style='position: relative'>
+                        <noscript>
+                            <a href='#'>
+                                <img alt='Scarcity ' src='https://public.tableau.com/static/images/Fi/FinalProject_17538907018640/Sheet1/1_rss.png' style='border: none' />
+                            </a>
+                        </noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https://public.tableau.com/' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='FinalProject_17538907018640/Sheet1' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/Fi/FinalProject_17538907018640/Sheet1/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                        </object>
+                    </div>
+                    <script type='text/javascript'>
+                        var divElement = document.getElementById('viz1753900366942-full');
+                        var vizElement = divElement.getElementsByTagName('object')[0];
+                        vizElement.style.width='100%';
+                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                        var scriptElement = document.createElement('script');
+                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                    </script>
+                </div>
+            </div>
+
+            <div class="viz-insights">
+                <h3>💡 What This Data Viz Tells Us</h3>
+                <p>This visualization explores regional differences in scarcity-driven shopping behavior on TikTok Shop across multiple provinces. It reveals that consumers in Can Tho consistently report the highest concern across all scarcity factors—promotion deadlines, time limits, quantity constraints, and fear of stockouts. In contrast, provinces like Tra Vinh and Soc Trang show lower levels of scarcity concern.</p>
+                <p>These insights suggest that perceptions of urgency and limited availability vary by location, potentially influenced by regional digital engagement, socioeconomic factors, or exposure to online shopping cues.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 KWK Data Science Capstone - Team B1. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html> 
