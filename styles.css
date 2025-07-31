@@ -10,6 +10,12 @@
     --light-pink: #e0c5bf;
     --soft-pink: #fdcaca;
     --off-white: #fbf1ee;
+    
+    /* Animation and Transition Variables */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --animation-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 * {
@@ -66,11 +72,28 @@ body {
     color: var(--off-white);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all var(--transition-normal);
+    position: relative;
 }
 
 .nav-menu a:hover {
     color: var(--warm-mustard);
+    transform: translateY(-2px);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--warm-mustard);
+    transition: width var(--transition-normal);
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
@@ -143,12 +166,13 @@ body {
     height: auto;
     border-radius: 16px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    transition: all var(--transition-normal);
     transform: translateY(3rem); /* Shift L1 image down 3rem */
 }
 
 .hero-main-image:hover {
-    transform: scale(1.05);
+    transform: translateY(3rem) scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
 .hero-content h1 {
@@ -184,13 +208,31 @@ body {
     border-radius: 12px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
+    transition: all var(--transition-normal);
     width: 200px; /* Increased width to 200px */
     min-width: 200px; /* Ensure consistent width */
+    position: relative;
+    overflow: hidden;
+}
+
+.stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left var(--transition-slow);
 }
 
 .stat:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.stat:hover::before {
+    left: 100%;
 }
 
 .stat-icon {
@@ -272,11 +314,29 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(47, 37, 38, 0.1);
     border-left: 4px solid var(--earth-red);
-    transition: transform 0.3s ease;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--warm-mustard);
+    transition: height var(--transition-normal);
 }
 
 .feature:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(47, 37, 38, 0.15);
+}
+
+.feature:hover::before {
+    height: 100%;
 }
 
 .feature-icon {
@@ -329,16 +389,34 @@ body {
     border-radius: 16px;
     padding: 2rem;
     box-shadow: 0 8px 30px rgba(47, 37, 38, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all var(--transition-normal);
     display: flex;
     flex-direction: column;
     height: 600px; /* Restored original height for better chart visibility */
     min-width: 500px; /* Added minimum width to ensure adequate space for charts */
+    position: relative;
+    overflow: hidden;
+}
+
+.viz-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--earth-red), var(--warm-mustard));
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
 }
 
 .viz-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(47, 37, 38, 0.2);
+}
+
+.viz-card:hover::before {
+    transform: scaleX(1);
 }
 
 .viz-card h3 {
@@ -377,6 +455,11 @@ body {
     margin-top: -8rem;
 }
 
+/* Call to Action heading - shifted 4rem down */
+.viz-section.call-to-action .section-header {
+    margin-top: 4rem;
+}
+
 /* Call to Action text styling with box design */
 .viz-section.call-to-action .section-description {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 248, 248, 0.9));
@@ -406,19 +489,6 @@ body {
     border-radius: 12px;
     z-index: -1;
     opacity: 0.3;
-}
-
-.viz-section.call-to-action .section-description::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(45deg, var(--earth-red), var(--warm-mustard));
-    border-radius: 2px;
-    opacity: 0.6;
 }
 
 .viz-section:last-child {
@@ -555,8 +625,21 @@ body {
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all var(--transition-normal);
     border: 2px solid var(--earth-red);
+    position: relative;
+    overflow: hidden;
+}
+
+.viz-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left var(--transition-slow);
 }
 
 .viz-button:hover {
@@ -564,6 +647,10 @@ body {
     border-color: var(--deep-red-brown);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(202, 52, 62, 0.3);
+}
+
+.viz-button:hover::before {
+    left: 100%;
 }
 
 .viz-placeholder {
@@ -777,11 +864,30 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(47, 37, 38, 0.1);
     border-top: 4px solid var(--earth-red);
-    transition: transform 0.3s ease;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.finding-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--earth-red), var(--warm-mustard));
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
 }
 
 .finding-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(47, 37, 38, 0.15);
+}
+
+.finding-card:hover::before {
+    transform: scaleX(1);
 }
 
 .finding-card h3 {
@@ -853,12 +959,30 @@ body {
     width: 100%;
     flex: 1;
     min-width: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-names::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--warm-mustard), var(--earth-red));
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
 }
 
 .team-names:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-names:hover::before {
+    transform: scaleX(1);
 }
 
 .names-badge {
@@ -886,11 +1010,30 @@ body {
     width: 100%;
     flex: 1;
     min-width: 300px;
-    transition: transform 0.3s ease;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--warm-mustard), var(--earth-red));
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
 }
 
 .project-info:hover {
     transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-info:hover::before {
+    transform: scaleX(1);
 }
 
 .project-badge {
@@ -944,11 +1087,30 @@ body {
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left var(--transition-slow);
 }
 
 .contact-form button:hover {
     background: var(--deep-red-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(202, 52, 62, 0.3);
+}
+
+.contact-form button:hover::before {
+    left: 100%;
 }
 
 /* Footer */
@@ -1103,7 +1265,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Animation for cards */
+/* Enhanced Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1115,8 +1277,91 @@ html {
     }
 }
 
-.viz-card,
-.finding-card,
-.feature {
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Apply animations with staggered delays */
+.viz-card {
     animation: fadeInUp 0.6s ease-out;
+}
+
+.viz-card:nth-child(1) { animation-delay: 0.1s; }
+.viz-card:nth-child(2) { animation-delay: 0.2s; }
+
+.finding-card {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.finding-card:nth-child(1) { animation-delay: 0.1s; }
+.finding-card:nth-child(2) { animation-delay: 0.2s; }
+.finding-card:nth-child(3) { animation-delay: 0.3s; }
+
+.feature {
+    animation: slideInRight 0.6s ease-out;
+}
+
+.feature:nth-child(1) { animation-delay: 0.1s; }
+.feature:nth-child(2) { animation-delay: 0.2s; }
+.feature:nth-child(3) { animation-delay: 0.3s; }
+
+.stat {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.stat:nth-child(1) { animation-delay: 0.1s; }
+.stat:nth-child(2) { animation-delay: 0.2s; }
+.stat:nth-child(3) { animation-delay: 0.3s; }
+
+/* Hover animations */
+.names-badge,
+.project-badge {
+    animation: pulse 2s infinite;
+}
+
+/* Smooth scrolling and performance optimizations */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed navbar */
+}
+
+/* Performance optimizations */
+* {
+    will-change: transform, opacity;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 } 
