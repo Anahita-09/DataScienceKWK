@@ -372,6 +372,11 @@ body {
     padding-top: 2rem;
 }
 
+/* Call to Action section - shifted 4rem up */
+.viz-section.call-to-action {
+    margin-top: -4rem;
+}
+
 .viz-section:last-child {
     margin-bottom: 0;
 }
