@@ -1,212 +1,45 @@
-# Creativity vs. Consumerism - Blind Box Culture Project
+# Data Science Capstone Project: Viral Toy Trends & Digital Consumer Behavior
 
-A beautiful, responsive data visualization website showcasing our KWK Data Science capstone project on blind box culture. This website explores the intersection of creativity and consumerism through interactive visualizations and can easily embed Tableau dashboards.
+## Project Overview
 
-## 🎨 Color Palette
+This project explores the psychological triggers behind impulsive purchases and digital consumer behavior across platforms and regions. We focus on how rapid content cycles and algorithmic targeting on social media stimulate dopamine-driven shopping habits, with a particular emphasis on viral toy microtrends and their impact on consumer psychology.
 
-The website uses your beautiful color scheme:
-- **Dark Brown/Almost Black**: `#2f2526`
-- **Deep Muted Reddish-Brown**: `#50353a`
-- **Earthy Red/Brick Red**: `#ca343e`
-- **Medium Muted Taupe/Brownish-Grey**: `#ab807a`
-- **Dusty Rose/Muted Pinkish-Brown**: `#c47e76`
-- **Light Muted Olive Green/Khaki**: `#cdc484`
-- **Warm Mustard Yellow/Goldenrod**: `#e9c554`
-- **Very Light Desaturated Pink/Pale Lavender-Grey**: `#e0c5bf`
-- **Soft Light Pink**: `#fdcaca`
-- **Off-White/Very Pale Cream with a Hint of Pink**: `#fbf1ee`
+## Core Focus: Tableau Data Visualizations
 
-## 🚀 Features
+The heart of this project lies in four comprehensive Tableau dashboards that transform complex consumer behavior data into interactive, insightful visualizations. Our first visualization examines consumer perceptions of scarcity on TikTok Shop in Vietnam, showing how urgency, limited availability, and FOMO drive impulse purchases regionally. The second tracks the virality of toys from 2020–2025 using Google Trends and hashtags, revealing the influence of short-lived microtrends. The third highlights product discovery patterns, showing Instagram as the top platform for recommendations, followed by TikTok and X/Twitter. The fourth analyzes U.S. shopping behavior, exposing a gap between sustainable intentions and actions—70% of Americans still prefer new items over secondhand options.
 
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Interactive Charts**: Sample charts using Chart.js with your color palette
-- **Smooth Animations**: Beautiful scroll-triggered animations
-- **Tableau Integration**: Ready to embed your Tableau dashboards
-- **Modern UI/UX**: Clean, professional design with excellent user experience
-- **Contact Form**: Functional contact form with validation
-- **SEO Optimized**: Proper meta tags and semantic HTML
-- **Blind Box Focus**: Specifically designed for youth consumer behavior research
+## Data Pipeline & Processing
 
-## 📁 File Structure
+Our data journey began with raw datasets from Kaggle, Google Trends API, and social media surveys. We started with Google Sheets for initial organization and basic cleaning, then moved to SQL for more complex transformations and data querying. The final step involved Tableau for creating interactive dashboards that could tell compelling stories about consumer behavior.
 
-```
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles with your color palette
-├── script.js           # JavaScript functionality
-└── README.md          # This file
-```
+The data cleaning process was thorough and systematic. We began by assessing data quality and completeness, then handled missing values strategically. Outlier detection was crucial for identifying anomalous data points that could skew our analysis. We standardized formats across multiple data sources and validated data integrity through cross-checking. The transformation phase involved aggregating individual responses into meaningful categories, normalizing scales for fair comparison, and creating derived variables for deeper analysis.
 
-## 🛠️ How to Use
+## Website Development & AI Transparency
 
-### 1. Open the Website
-Simply open `index.html` in your web browser to view the website.
+This website was built with the assistance of AI coding tools to accelerate development while maintaining focus on our core data science objectives. Our primary focus was data visualization and analysis, not web development, so using AI tools allowed us to spend more time on data cleaning and analysis while ensuring professional website presentation.
 
-### 2. Embed Your Tableau Dashboards
+All AI-generated code was reviewed and validated by team members, tested for functionality and performance, and customized to match our specific project requirements. The website features a responsive design optimized for all devices, smooth navigation with intuitive user experience, and visual consistency across all sections. The main landing page provides an overview with key statistics, while individual visualization pages offer detailed Tableau dashboard experiences.
 
-To embed your Tableau dashboards, you have two options:
+## Key Insights & Findings
 
-#### Option A: Using the JavaScript Function
-```javascript
-// In the browser console or in script.js, call:
-embedTableauDashboard('viz1', 'https://your-tableau-dashboard-url');
-embedTableauDashboard('viz2', 'https://your-second-tableau-dashboard-url');
-embedTableauDashboard('viz3', 'https://your-third-tableau-dashboard-url');
-embedTableauDashboard('viz4', 'https://your-fourth-tableau-dashboard-url');
-```
+Our analysis revealed fascinating patterns in viral toy microtrends. Each year from 2020-2025 had one dominant viral toy: Mini Brands (2020), Pop Its (2021), Squishmallows (2022), Sonny Angel (2024), and Labubu (2025). Social media platforms dramatically accelerated trend lifecycles from years to weeks, creating intense but short-lived consumer interest.
 
-#### Option B: Direct HTML Embedding
-Replace the placeholder content in each visualization card with your Tableau embed code:
+Regional differences in digital behavior were striking. Consumers in Can Tho consistently reported the highest concern across all scarcity factors—promotion deadlines, time limits, quantity constraints, and fear of stockouts. In contrast, provinces like Tra Vinh and Soc Trang showed lower levels of scarcity concern, revealing regional differences in digital shopping psychology.
 
-```html
-<!-- In index.html, replace the viz-placeholder div with: -->
-<div class="viz-placeholder">
-    <iframe 
-        src="https://your-tableau-dashboard-url" 
-        width="100%" 
-        height="600" 
-        frameborder="0">
-    </iframe>
-</div>
-```
+## Educational Value & Team
 
-### 3. Customize Content
+This project serves as a comprehensive example of the complete data science workflow, from raw data to actionable insights. It demonstrates Tableau mastery through advanced visualization techniques and dashboard design, while providing insights into consumer behavior analysis and research methodology.
 
-#### Update Project Information
-The website is already customized for your blind box culture project:
+**KWK Data Science Capstone - Team B1**
+- Anahita Mayekar: Data analysis and visualization
+- Samantha Wong: Research methodology and insights  
+- Atmika Balaji: Data cleaning and processing
+- Ishana Manikandan: Social media trend analysis
 
-- **Hero Section**: "Creativity vs. Consumerism" with blind box focus
-- **About Section**: Details about your research on youth consumer behavior
-- **Findings Section**: Key insights about regional differences and systemic influences
-- **Contact Section**: Team B1 information (Anahita, Samantha, Atmika, Ishana)
+## Getting Started
 
-#### Update Sample Charts
-The sample data in `script.js` is already customized for your blind box project:
-
-```javascript
-const sampleData = {
-    chart1: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-        datasets: [{
-            label: 'Blind Box Search Interest',
-            data: [45, 52, 78, 85, 92, 88],
-            backgroundColor: chartColors.primary,
-            borderColor: chartColors.secondary,
-            borderWidth: 2
-        }]
-    }
-    // ... other charts show arts access, consumer behavior, social media influence
-};
-```
-
-## 📊 Embedding Tableau Dashboards
-
-### Step 1: Get Your Tableau Dashboard URL
-1. Open your Tableau dashboard
-2. Click "Share" 
-3. Copy the embed URL
-
-### Step 2: Embed in the Website
-Use the `embedTableauDashboard()` function:
-
-```javascript
-// Example usage
-embedTableauDashboard('viz1', 'https://public.tableau.com/views/YourDashboard/Sheet1?:embed=y&:display_count=yes&:origin=viz_share_link');
-```
-
-### Step 3: Customize the Embed
-You can customize the iframe properties:
-
-```javascript
-function embedTableauDashboard(containerId, tableauUrl) {
-    const container = document.getElementById(containerId);
-    if (container) {
-        container.innerHTML = '';
-        
-        const iframe = document.createElement('iframe');
-        iframe.src = tableauUrl;
-        iframe.style.width = '100%';
-        iframe.style.height = '600px'; // Adjust height as needed
-        iframe.style.border = 'none';
-        iframe.style.borderRadius = '8px';
-        
-        container.appendChild(iframe);
-    }
-}
-```
-
-## 🎯 Sections Overview
-
-### 1. Hero Section
-- "Creativity vs. Consumerism" title with blind box focus
-- Key statistics about interactive dashboards and youth research
-- Call-to-action elements
-
-### 2. About Section
-- Blind box culture research methodology
-- Target audience: teens and young adults on social media
-- Data pipeline: Google Trends → Sheets → SQL → Tableau
-
-### 3. Visualizations Section
-- Google Trends Analysis (line graph)
-- U.S. Arts Access Map (interactive map)
-- Consumer Behavior Correlation (analysis)
-- Youth Demographics Dashboard (social media influence)
-
-### 4. Findings Section
-- Regional differences in collecting behavior
-- Systemic influences on youth consumption
-- Social media impact on trends
-- Educational opportunities for reflection
-
-### 5. Contact Section
-- Team B1 information (Anahita, Samantha, Atmika, Ishana)
-- KWK Data Science Capstone Project
-- Professional presentation
-
-## 🔧 Customization Tips
-
-### Colors
-All colors are defined as CSS variables in `styles.css`:
-```css
-:root {
-    --dark-brown: #2f2526;
-    --deep-red-brown: #50353a;
-    --earth-red: #ca343e;
-    /* ... other colors */
-}
-```
-
-### Typography
-The website uses Inter font family for a modern, clean look.
-
-### Animations
-Smooth animations are triggered on scroll and hover interactions.
-
-## 📱 Responsive Design
-
-The website is fully responsive and works on:
-- Desktop computers
-- Tablets
-- Mobile phones
-- All modern browsers
-
-## 🚀 Deployment
-
-To deploy this website:
-
-1. **GitHub Pages**: Upload to a GitHub repository and enable GitHub Pages
-2. **Netlify**: Drag and drop the folder to Netlify
-3. **Vercel**: Connect your GitHub repository to Vercel
-4. **Traditional Hosting**: Upload files to any web hosting service
-
-## 📞 Support
-
-If you need help customizing the website or embedding your Tableau dashboards, feel free to reach out!
-
-## 📄 License
-
-This project is created for your data science capstone project. Feel free to modify and use as needed.
+To run this project, simply open `index.html` in your web browser. Navigate through the sections using the navigation menu, click on visualization cards to explore detailed Tableau dashboards, and use interactive filters and tools within each visualization. No additional software installation is required beyond a modern web browser and internet connection for Tableau dashboard loading.
 
 ---
 
-**Note**: The current charts are sample data for demonstration. Replace them with your actual Google Trends data, arts funding statistics, and Tableau dashboards to showcase your real findings about blind box culture and youth consumer behavior. 
+*This project demonstrates the power of combining human analytical thinking with modern data visualization tools to uncover meaningful insights about consumer behavior in the digital age.* 

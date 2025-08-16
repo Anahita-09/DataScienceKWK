@@ -95,15 +95,14 @@
         </div>
     </section>
 
-        <section id="visualizations" class="visualizations">
+    <section id="visualizations" class="visualizations">
         <div class="container">
             <h2>Interactive Dashboard</h2>
             
-            <!-- Our Main Purpose Section -->
             <div class="viz-section">
                 <h3 class="section-header">Our Main Purpose</h3>
                 <div class="viz-grid">
-                                                             <div class="viz-card">
+                    <div class="viz-card">
                         <h3>Viral Toy Trends Analysis</h3>
                         <p class="viz-description">Analysis of viral toy microtrends from 2020-2025 and their social media lifecycle</p>
                         <div class="viz-preview">
@@ -134,7 +133,6 @@
                                     var divElement = document.getElementById('viz1753975741699-preview');
                                     var vizElement = divElement.getElementsByTagName('object')[0];
                                     
-                                    // Set responsive sizing for preview
                                     function resizeVizPreview() {
                                         var containerWidth = divElement.offsetWidth;
                                         vizElement.style.width = '100%';
@@ -143,13 +141,10 @@
                                         vizElement.style.minWidth = '400px';
                                     }
                                     
-                                    // Initial resize
                                     resizeVizPreview();
                                     
-                                    // Resize on window resize
                                     window.addEventListener('resize', resizeVizPreview);
                                     
-                                    // Load Tableau script
                                     var scriptElement = document.createElement('script');
                                     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                                     scriptElement.onload = function() {
@@ -200,7 +195,6 @@
                                     var divElement = document.getElementById('viz1753974593438-preview');
                                     var vizElement = divElement.getElementsByTagName('object')[0];
                                     
-                                    // Set responsive sizing for preview
                                     function resizeVizPreview() {
                                         var containerWidth = divElement.offsetWidth;
                                         vizElement.style.width = '100%';
@@ -209,13 +203,10 @@
                                         vizElement.style.minWidth = '400px';
                                     }
                                     
-                                    // Initial resize
                                     resizeVizPreview();
                                     
-                                    // Resize on window resize
                                     window.addEventListener('resize', resizeVizPreview);
                                     
-                                    // Load Tableau script
                                     var scriptElement = document.createElement('script');
                                     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                                     scriptElement.onload = function() {
@@ -237,7 +228,6 @@
                 </div>
             </div>
             
-            <!-- Call to Action Section -->
             <div class="viz-section call-to-action">
                 <h3 class="section-header">Call to Action</h3>
                 <p class="section-description">Through our visualizations, we aim to promote greater media literacy by helping viewers recognize how trend cycles manipulate perception and drive short-lived interest. By making these patterns visible, we hope to empower consumers to pause and reflect before engaging in impulsive shopping. Additionally, our findings show that many consumers rely on social media as their primary source for product recommendations. This highlights the need to explore alternative discovery methods, such as peer reviews, ethical brands, or second-hand shopping options.</p>
@@ -247,7 +237,7 @@
                         <p class="viz-description">Regional analysis of consumer scarcity perceptions on TikTok Shop in Vietnam</p>
                         <div class="viz-preview">
                             <div class="preview-image">
-                                                                 <div class='tableauPlaceholder' id='viz1753900366942' style='position: relative; height: 200px; width: 100%; overflow: hidden;'>
+                                <div class='tableauPlaceholder' id='viz1753900366942' style='position: relative; height: 200px; width: 100%; overflow: hidden;'>
                                     <noscript>
                                         <a href='#'>
                                             <img alt='Scarcity ' src='https://public.tableau.com/static/images/Fi/FinalProject_17538907018640/Sheet1/1_rss.png' style='border: none; width: 100%; height: 100%; object-fit: cover;' />
@@ -273,36 +263,32 @@
                                     var divElement = document.getElementById('viz1753900366942');
                                     var vizElement = divElement.getElementsByTagName('object')[0];
                                     
-                                     // Set responsive sizing for preview
-                                     function resizeVizPreview() {
-                                         var containerWidth = divElement.offsetWidth;
-                                         vizElement.style.width = '100%';
-                                         vizElement.style.height = '200px';
-                                         vizElement.style.maxWidth = '100%';
-                                         vizElement.style.minWidth = '400px';
-                                     }
+                                    function resizeVizPreview() {
+                                        var containerWidth = divElement.offsetWidth;
+                                        vizElement.style.width = '100%';
+                                        vizElement.style.height = '200px';
+                                        vizElement.style.maxWidth = '100%';
+                                        vizElement.style.minWidth = '400px';
+                                    }
                                     
-                                     // Initial resize
-                                     resizeVizPreview();
+                                    resizeVizPreview();
                                     
-                                     // Resize on window resize
-                                     window.addEventListener('resize', resizeVizPreview);
+                                    window.addEventListener('resize', resizeVizPreview);
                                     
-                                     // Load Tableau script
-                                     var scriptElement = document.createElement('script');
-                                     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                                     scriptElement.onload = function() {
-                                         setTimeout(function() {
-                                             vizElement.classList.add('loaded');
-                                         }, 1000);
-                                     };
-                                     scriptElement.onerror = function() {
-                                         console.error('Failed to load Tableau script');
-                                         vizElement.style.display = 'none';
-                                         divElement.querySelector('noscript').style.display = 'block';
-                                     };
-                                     vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                                 </script>
+                                    var scriptElement = document.createElement('script');
+                                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                    scriptElement.onload = function() {
+                                        setTimeout(function() {
+                                            vizElement.classList.add('loaded');
+                                        }, 1000);
+                                    };
+                                    scriptElement.onerror = function() {
+                                        console.error('Failed to load Tableau script');
+                                        vizElement.style.display = 'none';
+                                        divElement.querySelector('noscript').style.display = 'block';
+                                    };
+                                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                                </script>
                             </div>
                             <a href="viz1-trends.html" class="viz-button">Explore Trends</a>
                         </div>
@@ -339,35 +325,31 @@
                                     var divElement = document.getElementById('viz1753886530259-preview');
                                     var vizElement = divElement.getElementsByTagName('object')[0];
                                     
-                                     // Set responsive sizing for preview
-                                     function resizeVizPreview() {
-                                         var containerWidth = divElement.offsetWidth;
-                                         vizElement.style.width = '100%';
-                                         vizElement.style.height = '200px';
-                                         vizElement.style.maxWidth = '100%';
-                                     }
+                                    function resizeVizPreview() {
+                                        var containerWidth = divElement.offsetWidth;
+                                        vizElement.style.width = '100%';
+                                        vizElement.style.height = '200px';
+                                        vizElement.style.maxWidth = '100%';
+                                    }
                                     
-                                     // Initial resize
-                                     resizeVizPreview();
+                                    resizeVizPreview();
                                     
-                                     // Resize on window resize
-                                     window.addEventListener('resize', resizeVizPreview);
+                                    window.addEventListener('resize', resizeVizPreview);
                                     
-                                     // Load Tableau script
-                                     var scriptElement = document.createElement('script');
-                                     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                                     scriptElement.onload = function() {
-                                         setTimeout(function() {
-                                             vizElement.classList.add('loaded');
-                                         }, 1000);
-                                     };
-                                     scriptElement.onerror = function() {
-                                         console.error('Failed to load Tableau script');
-                                         vizElement.style.display = 'none';
-                                         divElement.querySelector('noscript').style.display = 'block';
-                                     };
-                                     vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                                 </script>
+                                    var scriptElement = document.createElement('script');
+                                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                    scriptElement.onload = function() {
+                                        setTimeout(function() {
+                                            vizElement.classList.add('loaded');
+                                        }, 1000);
+                                    };
+                                    scriptElement.onerror = function() {
+                                        console.error('Failed to load Tableau script');
+                                        vizElement.style.display = 'none';
+                                        divElement.querySelector('noscript').style.display = 'block';
+                                    };
+                                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                                </script>
                             </div>
                             <a href="viz2-shopping.html" class="viz-button">Explore Shopping Data</a>
                         </div>
@@ -376,47 +358,46 @@
             </div>
         </div>
     </section>
-    </section>
 
     <section id="findings" class="findings">
         <div class="container">
             <h2>Key Findings</h2>
-                                         <div class="findings-grid">
-                    <div class="finding-card">
-                        <h3>Viral Toy Microtrends</h3>
-                        <p>Each year from 2020-2025 had one dominant viral toy: Mini Brands (2020), Pop Its (2021), Squishmallows (2022), Sonny Angel (2024), and Labubu (2025), with social media platforms dramatically accelerating trend lifecycles from years to weeks.</p>
-                    </div>
-                    <div class="finding-card">
-                        <h3>Regional Scarcity Psychology</h3>
-                        <p>Consumers in Can Tho consistently report the highest concern across all scarcity factors—promotion deadlines, time limits, quantity constraints, and fear of stockouts—while provinces like Tra Vinh and Soc Trang show lower levels of scarcity concern, revealing regional differences in digital shopping psychology.</p>
-                    </div>
-                    <div class="finding-card">
-                        <h3>Sustainable Shopping Gap</h3>
-                        <p>70% of U.S. shoppers still buy items brand new, with only 17% choosing to thrift and 13% buying from resale platforms, despite the rise of sustainable fashion and secondhand marketplaces, highlighting the gap between environmental awareness and actual shopping behavior.</p>
-                    </div>
+            <div class="findings-grid">
+                <div class="finding-card">
+                    <h3>Viral Toy Microtrends</h3>
+                    <p>Each year from 2020-2025 had one dominant viral toy: Mini Brands (2020), Pop Its (2021), Squishmallows (2022), Sonny Angel (2024), and Labubu (2025), with social media platforms dramatically accelerating trend lifecycles from years to weeks.</p>
                 </div>
+                <div class="finding-card">
+                    <h3>Regional Scarcity Psychology</h3>
+                    <p>Consumers in Can Tho consistently report the highest concern across all scarcity factors—promotion deadlines, time limits, quantity constraints, and fear of stockouts—while provinces like Tra Vinh and Soc Trang show lower levels of scarcity concern, revealing regional differences in digital shopping psychology.</p>
+                </div>
+                <div class="finding-card">
+                    <h3>Sustainable Shopping Gap</h3>
+                    <p>70% of U.S. shoppers still buy items brand new, with only 17% choosing to thrift and 13% buying from resale platforms, despite the rise of sustainable fashion and secondhand marketplaces, highlighting the gap between environmental awareness and actual shopping behavior.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-                                               <section id="contact" class="contact">
-            <div class="container">
-                <h2>Meet Our Team</h2>
-                <div class="team-content">
-                    <div class="team-names">
-                        <div class="names-badge">👥</div>
-                        <h3>Anahita Mayekar</h3>
-                        <h3>Samantha Wong</h3>
-                        <h3>Atmika Balaji</h3>
-                        <h3>Ishana Manikandan</h3>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-badge">🎓</div>
-                        <h3>KWK Data Science Capstone Project</h3>
-                        <p>Team B1</p>
-                    </div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-content">
+                <div class="team-names">
+                    <div class="names-badge">👥</div>
+                    <h3>Anahita Mayekar</h3>
+                    <h3>Samantha Wong</h3>
+                    <h3>Atmika Balaji</h3>
+                    <h3>Ishana Manikandan</h3>
+                </div>
+                <div class="project-info">
+                    <div class="project-badge">🎓</div>
+                    <h3>KWK Data Science Capstone Project</h3>
+                    <p>Team B1</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
