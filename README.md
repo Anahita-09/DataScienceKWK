@@ -27,6 +27,3 @@ Regional differences in digital behavior were striking. Consumers in Can Tho con
 ## Educational Value
 
 This project serves as a comprehensive example of the complete data science workflow, from raw data to actionable insights. It demonstrates Tableau & SQL mastery through advanced visualization techniques and dashboard design, while providing insights into consumer behavior analysis and research methodology.
----
-
-*This project demonstrates the power of combining human analytical thinking with modern data visualization tools
