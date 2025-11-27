@@ -17,7 +17,7 @@ The data cleaning process was systematic. We began by assessing the quality of t
 
 ## Website Development & AI Transparency
 
-This website was built with somewhat assistance of AI coding tools to accelerate development while maintaining focus on our core data science objectives. Our primary focus was data visualization and analysis, not web development, so using AI tools allowed me to spend more time on data cleaning and analysis while ensuring professional website presentation.
+This website was built with somewhat assistance of cursor AI coding tool to accelerate development while maintaining focus on our core data science objectives. Our primary focus was data visualization and analysis, not web development, so using AI tools allowed me to spend more time on data cleaning and analysis while ensuring professional website presentation.
 
 ## Key Insights & Findings
 
